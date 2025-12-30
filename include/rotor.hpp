@@ -10,7 +10,9 @@ using namespace std;
 struct Rotor
 {
 public:
-	explicit Rotor(const string &configuration);
+	Rotor();
+	explicit Rotor(const string configuration);
+	void reconfigure(const string configuration);
 	char encryptChar(char input) const;
 	char decryptChar(char input) const;
 	bool rotate();
@@ -21,6 +23,7 @@ private:
 	int rotationIndex; // current rotation: % 26 to wrap around
 
 	static int charToInt(char character);
+	static int wrapAround(int num);
 };
 
 #endif //ENIGMA_ROTOR_HPP

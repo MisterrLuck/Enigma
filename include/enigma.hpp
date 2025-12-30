@@ -9,11 +9,17 @@
 #include "rotor.hpp"
 using namespace std;
 
-static Rotor ROTOR1("ghabcdefijklmnopqrstuvwxyz");
-static Rotor ROTOR2("abcdefghijklmnopqrstuvwxyz");
-static Rotor ROTOR3("abcdefghijklmnopqrstuvwxyz");
-static Rotor ROTOR4("abcdefghijklmnopqrstuvwxyz");
-static Rotor ROTOR5("abcdefghijklmnopqrstuvwxyz");
+// static Rotor ROTOR1("ghabcdefijklmnopqrstuvwxyz");
+// static Rotor ROTOR2("abcdefghijklmnopqrstuvwxyz");
+// static Rotor ROTOR3("abcdefghijklmnopqrstuvwxyz");
+// static Rotor ROTOR4("abcdefghijklmnopqrstuvwxyz");
+// static Rotor ROTOR5("abcdefghijklmnopqrstuvwxyz");
+#define ROTOR1    "jgdqoxuscamifrvtpnewkblzyh"
+#define ROTOR2    "ntzpsfbokmwrcjdivlaeyuxhgq"
+#define ROTOR3    "jviubhtcdyakeqzposgxnrmwfl"
+#define ROTOR4    "abcdefghijklmnopqrstuvwxyz"
+#define ROTOR5    "abcdefghijklmnopqrstuvwxyz"
+#define REFLECTOR "qyhognecvpuztfdjaxwmkisrbl"
 
 class Enigma
 {
@@ -22,7 +28,7 @@ public:
 	void changeSettings(const int order[3], const int starts[3]);
 	void changeSettings(const int order[3], const int starts[3], const char plugs[10][2]);
 
-	void encryptString(string text);
+	string encryptString(const string &text);
 
 private:
 	// Curr Settings
@@ -31,7 +37,8 @@ private:
 	char plugBoard[10][2]; // pairs of letters on the plug board
 	bool usingPlugs = false;
 
-	Rotor *rotors[3]; // actual rotor addresses
+	Rotor rotors[3]; // actual rotor addresses
+	Rotor reflector;
 };
 
 #endif //ENIGMA_ENIGMA_HPP
