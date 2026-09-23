@@ -1,7 +1,3 @@
-//
-// Created by joshu on 29/12/25.
-//
-
 #include "../include/enigma.hpp"
 
 #include <iostream>

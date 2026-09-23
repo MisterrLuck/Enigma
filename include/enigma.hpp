@@ -1,19 +1,9 @@
-//
-// Created by joshu on 29/12/25.
-//
-
-#ifndef ENIGMA_ENIGMA_HPP
-#define ENIGMA_ENIGMA_HPP
+#pragma once
 
 #include <string>
 #include "rotor.hpp"
 using namespace std;
 
-// static Rotor ROTOR1("ghabcdefijklmnopqrstuvwxyz");
-// static Rotor ROTOR2("abcdefghijklmnopqrstuvwxyz");
-// static Rotor ROTOR3("abcdefghijklmnopqrstuvwxyz");
-// static Rotor ROTOR4("abcdefghijklmnopqrstuvwxyz");
-// static Rotor ROTOR5("abcdefghijklmnopqrstuvwxyz");
 #define ROTOR1    "jgdqoxuscamifrvtpnewkblzyh"
 #define ROTOR2    "ntzpsfbokmwrcjdivlaeyuxhgq"
 #define ROTOR3    "jviubhtcdyakeqzposgxnrmwfl"
@@ -40,5 +30,3 @@ private:
 	Rotor rotors[3]; // actual rotor addresses
 	Rotor reflector;
 };
-
-#endif //ENIGMA_ENIGMA_HPP

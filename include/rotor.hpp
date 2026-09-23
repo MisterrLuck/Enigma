@@ -1,9 +1,5 @@
-//
-// Created by joshu on 29/12/25.
-//
+#pragma once
 
-#ifndef ENIGMA_ROTOR_HPP
-#define ENIGMA_ROTOR_HPP
 #include <string>
 using namespace std;
 
@@ -25,5 +21,3 @@ private:
 	static int charToInt(char character);
 	static int wrapAround(int num);
 };
-
-#endif //ENIGMA_ROTOR_HPP

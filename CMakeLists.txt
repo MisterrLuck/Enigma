@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 4.2)
 project(Enigma)
 
-include_directories(${include})
+include_directories(include/)
 
 set(CMAKE_CXX_STANDARD 20)
 

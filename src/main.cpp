@@ -9,8 +9,7 @@ int main()
 	Enigma machine;
 	constexpr int order[3] = {1, 2, 3};
 	constexpr int plugs[3] = {0, 0, 0};
-	// // constexpr char board[10][2] = {};
-	//
+
 	machine.changeSettings(order, plugs);
 	const string encrypted = machine.encryptString("This is encrypted text");
 	cout << encrypted << endl;
